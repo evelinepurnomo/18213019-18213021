@@ -1,5 +1,5 @@
-/*TUGAS 1 18213019-18213021 */
-/*SUMBER: http://pirate.shu.edu/~wachsmut/Teaching/CSAS2214/Virtual/Lectures/chat-client-server.html */
+/*ASSIGNMENT 1 18213019-18213021 */
+/*SOURCE: http://pirate.shu.edu/~wachsmut/Teaching/CSAS2214/Virtual/Lectures/chat-client-server.html */
 
 import java.net.*;
 import java.io.*;
