@@ -1,5 +1,5 @@
-/*TUGAS 1 18213019-18213021 */
-/*SUMBER: http://pirate.shu.edu/~wachsmut/Teaching/CSAS2214/Virtual/Lectures/chat-client-server.html */
+/*ASSIGNMENT 1 18213019-18213021 */
+/*SOURCE: http://pirate.shu.edu/~wachsmut/Teaching/CSAS2214/Virtual/Lectures/chat-client-server.html */
 
 import java.net.*;
 import java.io.*;
@@ -19,11 +19,12 @@ public class ChatServer
          System.out.println("Client accepted: " + socket);
          open();
          boolean done = false;
+         System.out.println("Message received:");
          while (!done)
          {  try
             {  String line = streamIn.readUTF();
                System.out.println(line);
-               done = line.equals(".bye");
+               done = line.equals(".okdone");
             }
             catch(IOException ioe)
             {  done = true;
