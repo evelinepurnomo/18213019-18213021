@@ -1,5 +1,6 @@
 /*2nd Assignment of Integrative Programming */
 /* 18213019-18213021*/
+/* File transfer client */
 /*Source: http://www.rgagnon.com/javadetails/java-0542.html*/
 
 import java.io.BufferedReader;
@@ -25,7 +26,10 @@ int current = 0;
 BufferedWriter bw;
 File file=null;
 byte [] mybytearray  = null;
-public final static String FILE_RECEIVED = "received.txt";
+String namafile="";
+public final static String FILE_A_RECEIVED = "A.txt";
+public final static String FILE_B_RECEIVED = "B.txt";
+public final static String FILE_C_RECEIVED = "C.txt";
 public final static int FILE_SIZE = 6022386;
 
 public Client(String serverip, int port) {
@@ -58,9 +62,17 @@ public void run() {
 					System.out.println("Server says : : : " + out);
 				}
 				else {
-					out = out.substring(0, out.length()-1);
-					File file = new File(FILE_RECEIVED);
-					bw = new BufferedWriter (new FileWriter (FILE_RECEIVED));
+					if (in.equals ("1")) {
+						namafile = FILE_A_RECEIVED;
+					}
+					if (in.equals ("2")) {
+						namafile = FILE_B_RECEIVED;
+					}
+					if (in.equals ("3")) {
+						namafile = FILE_C_RECEIVED;
+					}
+					File file = new File(namafile);
+					bw = new BufferedWriter (new FileWriter (namafile));
 					if (!file.exists()) {
 						file.createNewFile();
 					};
