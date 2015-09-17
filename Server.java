@@ -1,5 +1,6 @@
 /*2nd Assignment of Integrative Programming */
 /* 18213019-18213021*/
+/* File transfer server */
 /*Source: http://www.rgagnon.com/javadetails/java-0542.html*/
 
 import java.io.BufferedReader;
